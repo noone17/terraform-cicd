@@ -54,3 +54,9 @@ jobs:
       - name: Terraform Output
         if: github.event_name == 'workflow_dispatch'
         run: terraform output -no-color
+
+      
+      - name: Terraform Destroy
+        if: github.event_name == 'workflow_dispatch' && inputs.action == 'destroy'
+        run: terraform destroy -input=false -auto-approve
+

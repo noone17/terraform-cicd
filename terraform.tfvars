@@ -9,5 +9,5 @@ instance_type      = "t3.micro"
 # SSH source CIDR
 ssh_allowed_cidr = "172.69.0.0/16"
 
-# Replace with an existing EC2 key pair name
-key_name = "my-keypair"
+# No EC2 key pair is attached
+key_name = null
